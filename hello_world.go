@@ -6,19 +6,22 @@ import (
 )
 
 const (
-  port = ":80"
+  port = ":3000"
 )
 
 var calls = 0
 
-func HelloWorld(w http.ResponseWriter, r *http.Request) {
+func helloWorld(w http.ResponseWriter, r *http.Request) {
   calls++
   fmt.Fprintf(w, "Hello, world! You have called me %d times.\n", calls)
 }
 
+func handlerICon(w http.ResponseWriter, r *http.Request) {}
+
 func init() {
   fmt.Printf("Started server at http://localhost%v.\n", port)
-  http.HandleFunc("/", HelloWorld)
+  http.HandleFunc("/favicon.ico", handlerICon)
+  http.HandleFunc("/", helloWorld)
   http.ListenAndServe(port, nil)
 }
 
