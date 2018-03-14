@@ -6,4 +6,4 @@
 
 .DS_Store
 Procfile
-hello-world.exe
+*.exe
