@@ -13,11 +13,11 @@ var calls = 0
 
 func helloWorld(w http.ResponseWriter, r *http.Request) {
 	calls++
-	fmt.Fprintf(w, "Hello, world! You have called me %d times.\n", calls)
+	fmt.Fprintf(w, "Hello AWS Elastic Beanstalk: v2. You have called me %d times.\n", calls)
 }
 
 func faviconHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "static/favicon.ico")
+	http.ServeFile(w, r, "./static/favicon.ico")
 }
 
 func init() {

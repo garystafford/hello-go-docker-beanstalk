@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: go-demo-v1
+    environment: null
 environment-defaults:
   go-demo-v1:
     branch: null

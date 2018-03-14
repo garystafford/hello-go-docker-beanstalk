@@ -5,3 +5,5 @@
 !.elasticbeanstalk/*.global.yml
 
 .DS_Store
+Procfile
+hello-world.exe
